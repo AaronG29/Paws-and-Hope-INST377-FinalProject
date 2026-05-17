@@ -1,0 +1,208 @@
+:root {
+  --primary:      #c04600;
+  --primary-dark: #9c3700;
+  --accent:       #9c694d;
+  --accent-light: #c47f5d;
+  --bg:           #f6efe7;
+  --card:         #fffaf5;
+  --text:         #4b3f35;
+  --border:       #d8c8b8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+
+/*  Header  */
+header {
+  background-color: var(--primary);
+  padding: 25px 20px 15px;
+  text-align: center;
+  color: white;
+  border-bottom: 4px solid #575757;
+}
+header h1 { margin: 0; font-size: 36px; }
+header p  { margin: 8px 0 0; font-size: 16px; }
+
+
+/*  Nav bar  */
+nav {
+  background-color: var(--primary-dark);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+nav a:hover,
+nav a.active {
+  background-color: rgba(255,255,255,0.2);
+}
+
+
+main { padding: 20px; max-width: 1200px; margin: 0 auto; }
+
+
+/*  Welcome  */
+#welcomeText,
+.hero-text {
+  text-align: center;
+  margin: 22px auto;
+  font-size: 18px;
+  max-width: 700px;
+  line-height: 1.5;
+  padding: 0 15px;
+}
+
+
+/*  Breed grid and dog cards  */
+#breedContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px 10px;
+}
+
+.dog-card {
+  background-color: var(--card);
+  width: 240px;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.dog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+.dog-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover; 
+  border-radius: 12px;
+}
+.dog-card h3 {
+  margin: 12px 0 10px;
+  text-transform: capitalize;
+}
+
+
+/*  Buttons  */
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+button:hover { background-color: var(--accent-light); }
+
+/* Red remove button on Favorites */
+button.danger        { background-color: #a83232; }
+button.danger:hover  { background-color: #c44848; }
+
+
+/*  Swiper carousel sizing  */
+.swiper {
+  width: 100%;
+  max-width: 900px;
+  height: 380px;
+  margin: 20px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide .caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+
+/*  About page */
+.about-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 28px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  line-height: 1.6;
+}
+.about-section h2 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+
+/*  Favorites page grid and empty state  */
+#favoritesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+#emptyState {
+  text-align: center;
+  color: var(--accent);
+  font-size: 18px;
+  padding: 40px;
+}
+
+
+/* Loading spinner  */
+.loader {
+  display: block;
+  margin: 40px auto;
+  border: 5px solid var(--border);
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+

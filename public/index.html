@@ -1,99 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paws and Hope</title>
-    <script src="script.js" defer></script>
-    <style>
-        body {
-            font-family: Verdana, sans-serif;
-            background-color: #f6efe7;
-            margin: 0;
-            padding: 0;
-            color: #4b3f35;
-        }
-        header {
-            background-color: #c04600;
-            padding: 25px;
-            text-align: center;
-            color: white;
-            border-bottom: 4px solid #575757;
-        }
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        header p {
-            margin-top: 8px;
-            font-size: 16px;
-        }
-        #welcomeText {
-            text-align: center;
-            margin: 22px auto 0 auto;
-            font-size: 18px;
-            max-width: 700px;
-            line-height: 1.5;
-            padding: 0 15px;
-        }
-        #breedContainer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            padding: 30px;
-        }
-        .dog-card {
-            background-color: #fffaf5;
-            width: 240px;
-            padding: 15px;
-            border-radius: 14px;
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .dog-card img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-        .dog-card h3 {
-            margin-top: 12px;
-            margin-bottom: 10px;
-            text-transform: capitalize;
-        }
-        button {
-            background-color: #9c694d;
-            color: white;
-            border: none;
-            padding: 10px 14px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        button:hover {
-            background-color: #c47f5d;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws and Hope | Home</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+  <link rel="stylesheet" href="styles.css">
+
+<!--The swiper js-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 
-
-
-
-
 <body>
-    <header>
-        <h1>Paws and Hope Animal Rescue</h1>
-        <p>You can browse dog breeds and save your favorites!</p>
-    </header>
 
-    <p id="welcomeText">
-        Helping new pet owners look around for dog breads in a much more simple way! 
+  <!--Animate.css class-->
+  <header> 
+    <h1 class="animate__animated animate__bounceInDown">Paws and Hope Animal Rescue</h1>
+    <p class="animate__animated animate__fadeIn animate__delay-1s">Browse dog breeds and save your favorites!</p>
+  </header>
 
-    <main>
-        <div id="breedContainer"></div>
-    </main>
+<!--Nav bar-->
+  <nav>
+    <a href="/" class="active">Home</a>
+    <a href="/about">About</a>
+    <a href="/favorites">My Favorites</a>
+  </nav>
+
+  <main>
+
+    <p id="welcomeText" class="animate__animated animate__fadeInUp">
+      Helping new pet owners explore dog breeds in a simpler, friendlier way.
+      Scroll through the highlights, then save the ones you love.
+    </p>
+
+    <!--Swiper carousel container-->
+    <div class="swiper" id="featuredSwiper">
+      <div class="swiper-wrapper" id="swiperWrapper">
+      </div>
+      <!-- Previous and next arrown buttons -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <h2 style="text-align:center; color: var(--primary);">All Breeds</h2>
+
+
+    <div id="breedContainer">
+      <div class="loader"></div>
+    </div>
+  </main>
+
+
+
 </body>
-
 </html>
+

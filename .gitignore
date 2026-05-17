@@ -1,1 +1,15 @@
 .env
+.env.*
+.env.local
+
+node_modules/
+
+
+.DS_Store
+
+
+*.log
+.vscode/
+
+
+.vercel

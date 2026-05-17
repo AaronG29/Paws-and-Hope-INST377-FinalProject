@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws and Hope | About</title>
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="animate__animated animate__bounceInDown">About Paws and Hope</h1>
+    <p>Our mission, our team, and how the app works.</p>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about" class="active">About</a>
+    <a href="/favorites">My Favorites</a>
+  </nav>
+
+  <main>
+    <section class="about-section animate__animated animate__fadeInUp">
+      <h2>Our Mission</h2>
+      <p>
+        Paws and Hope helps prospective dog owners explore breeds in a low pressure,
+        visual way. Choosing a dog is a big commitment, our goal is to make the
+        early research phase fun, informative, and personal. Users can browse a
+        variety of breeds, see photos, and save the ones that catch their eye to
+        a personal favorites list for later.
+      </p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="about-section animate__animated animate__fadeInUp animate__delay-1s">
+      <h2>How It Works</h2>
+      <p>
+        The app pulls a list of all dog breeds from the
+        Dog CEO API and grabs a random image for each one.
+        When you save a favorite, the breed and image URL get stored in our
+        Supabase database so you can come back to them on the
+        Favorites page. It's a full-stack app built with express on Node.js and
+        deployed on vercel.
+      </p>
+    </section>
+
+
+    <!-- Team -->
+    <section class="about-section animate__animated animate__fadeInUp animate__delay-2s">
+      <h2>The Team</h2>
+      <p>Sam Swarna and Aaron Gross</p>
+    </section>
+
+  </main>
+
+
+</body>
+</html>
+
